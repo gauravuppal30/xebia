@@ -1,0 +1,10 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    width:100%;
+    margin: 15px auto;
+    .error{
+        color: #ff2200;
+    }
+}

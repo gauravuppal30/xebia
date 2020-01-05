@@ -1,0 +1,12 @@
+.card{
+    margin-bottom: 20px;
+    &-img-overlay{
+        display: none;
+    }
+    &:hover{
+        .card-img-overlay{
+            display: block;
+            background-color: #ccc;
+        }
+    }
+}
