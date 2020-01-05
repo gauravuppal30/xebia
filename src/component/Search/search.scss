@@ -1,7 +1,20 @@
+
+.page-heading{
+    padding: 0 15px;
+}
+
+.loading{
+    font-size: 24px;
+    text-align: center;
+    display: block;
+}
+.error{
+    color:#ff2200;
+}
 .search{
     &-box{
         width:100%;
-        padding: 0 15px 0 15px;
+        padding: 0 15px;
         margin-bottom: 20px;
         position: relative;
         input{

@@ -20,16 +20,24 @@ export default function SearchDetail(){
         }
     },[]);
 
+    if(!item){
+        return <div className="container">
+            <div className="row">
+                <span className="loading">Loading...</span>
+            </div>
+        </div>
+    }
+
     return (
         <div className="container">
             <div className="row">
                 <div className="content">
-                    <h1 className="display-4">{item && item.name}</h1>
-                    <p className="lead">Climate : {item && item.climate}</p>
-                    <p className="lead">Terrain : {item && item.terrain}</p>
-                    <p >Population : {item && item.population}</p>
-                    <p><small>Created : {item && item.created}</small></p>
-                    <p><small>Edited : {item && item.edited}</small></p>
+                    <h1 className="display-4">{item.name}</h1>
+                    <p className="lead">Climate : {item.climate}</p>
+                    <p className="lead">Terrain : {item.terrain}</p>
+                    <p >Population : {item.population}</p>
+                    <p><small>Created : {item.created}</small></p>
+                    <p><small>Edited : {item.edited}</small></p>
                 </div>
             </div>
         </div>
