@@ -57,7 +57,7 @@ export default function Login({authencatedUser}){
                         <input type="password" className="form-control" id="password" placeholder="Password" 
                             onChange={(e)=>e.target.value && e.target.value.length > 4 && setPassword(e.target.value)} />
                     </div>
-                    <button type="submit" onClick={authenticateUser} className="btn btn-primary">Submit</button>                
+                    <button type="submit" onClick={authenticateUser} className="btn btn-primary">Login</button>
                 </div>
             </div>
         </div>

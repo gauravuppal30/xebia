@@ -10,9 +10,9 @@ export default function Search() {
     const [ searchDirty , setSearchDirty] = useState(false);
     const [ loading , setLoading] = useState(false);
 
-    // useEffect(()=>{
-    //     searchResults('');
-    // },[]);
+    useEffect(()=>{
+        searchResults('');
+    },[]);
 
     const searchResults = async(query) => {
         setLoading(false);
@@ -63,7 +63,7 @@ export default function Search() {
             }
             return(
                 <div className={classValue} key={index}>
-                    <Link to={"/search/"+item.name}>                    
+                    <Link onClick={sessionStorage.setItem('detail',item.url)} to={"/search/"+item.name}>
                         <div className="card">
                             <div className="card-body">
                                 <h5 className="card-title">{item.name}</h5>
@@ -74,7 +74,7 @@ export default function Search() {
                             </div>
                         </div>
                     </Link>
-            </div>
+                </div>
             )
         })
     }

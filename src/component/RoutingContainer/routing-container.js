@@ -20,19 +20,19 @@ export default function RoutingContainer({authencatedUser}) {
                 <div className="container-fluid">
                     <div className="row">
                         <ul className="navbar navbar-dark bg-dark justify-content-center">
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link className="nav-link" to="/">Home</Link>
-                            </li>
+                            </li> */}
                             <li className="nav-item">
-                                <Link className="nav-link" to="/search">Search</Link>
+                                <Link className="nav-link" to="/">Search</Link>
                             </li>
                         </ul>
                     </div>
                 </div>
                 
-                <Route exact path="/" component={HomePlanets} />
-                <Route exact path="/search" component={Search} />
-                <Route path="/search/:name" component={SearchDetail}/>
+                {/* <Route exact path="/" component={HomePlanets} /> */}
+                <Route exact path="/" component={Search} />
+                <Route path="/:name" component={SearchDetail}/>
             </Router>
         </div>
 
