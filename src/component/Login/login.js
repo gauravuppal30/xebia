@@ -29,13 +29,13 @@ export default function Login({authencatedUser}){
     }
     
     const authenticateUser = () => {
-        console.log('userList',userList);
+        //console.log('userList',userList);
         const userExists = checkValidUser();
 
         if(!userExists || userExists.length === 0){
             setError('Please try with a Valid User');
         }
-        console.log('userExists',userExists)
+        //console.log('userExists',userExists)
         if(userExists && userExists.length > 0){
             authencatedUser(username);
         }

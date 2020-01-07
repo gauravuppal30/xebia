@@ -54,7 +54,7 @@ export default function Search() {
     }
 
     const setLink = (link) => {
-        console.log('link',link)
+        //console.log('link',link)
         sessionStorage.setItem('detail',link)
     }
 

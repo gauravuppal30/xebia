@@ -14,7 +14,7 @@ export default function App() {
     setUser(sessionStorage.getItem('logged in'));
     username ? setValidUser(true) : setValidUser(false);
   }
-  console.log('validd',validUser,user);
+  //console.log('validd',validUser,user);
   const loggedIn = !validUser ?
     <Login authencatedUser={authencatedUser} /> : <RoutingContainer authencatedUser={authencatedUser} />;
   return (
